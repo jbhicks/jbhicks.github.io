@@ -1,5 +1,5 @@
 import adapter from "@sveltejs/adapter-static";
-// was "@sveltejs/adapter-auto"
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 const dev = "production" === "development";
 
@@ -14,7 +14,8 @@ const config = {
 			// change below to your repo name
 			base: dev ? "" : "",
 		},
-	}
+	},
+	preprocess: vitePreprocess()
 };
 
 export default config;
