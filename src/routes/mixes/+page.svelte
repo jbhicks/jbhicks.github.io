@@ -3,7 +3,7 @@
 
 	let mixes = [] as Mix[];
 
-	async function roll() {
+	async function getMixes() {
 		const response = await fetch('/api/mixes');
 		const mixList: Collection = await response.json();
 		mixes = mixList.collection;
@@ -19,7 +19,7 @@
 	}
 </script>
 
-<button class="btn btn-accent" on:click={roll}>Get Mixes</button>
+<button class="btn btn-accent" on:click={getMixes}>Get Mixes</button>
 
 {#each mixes as mix}
 	<div class="collapse collapse-arrow bg-base-200">

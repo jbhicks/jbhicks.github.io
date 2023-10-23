@@ -1,6 +1,6 @@
 import type { RequestHandler } from './$types';
 
-export const prerender: boolean = true;
+export const prerender = false;
 
 export async function GET({ params }) {
     console.log(`${params}`);

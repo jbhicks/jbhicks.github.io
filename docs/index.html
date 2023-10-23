@@ -2,42 +2,31 @@
 <html lang="en" data-theme="dark">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="./favicon.png" />
+		<link rel="icon" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="./_app/immutable/assets/0.1c89ddfb.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.a5d49517.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.63274e7e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.0c6d0609.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.64c2ea3d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.602e4d91.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.6a84d4a4.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/3.16c74136.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/start.72b9a3be.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/scheduler.63274e7e.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.4d16d679.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.ba8df1d8.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.602e4d91.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">  <header class="bg-gray-800 text-white" data-svelte-h="svelte-1f4qzdo"><div class="navbar bg-base-500"><nav><ul class="flex"><li><a href="/" class="flex items-center px-4 rounded py-2 hover:bg-gray-700">Home</a></li> <li><a href="/mixes" class="flex items-center rounded px-4 py-2 hover:bg-gray-700">Mixes</a></li></ul></nav></div></header> <div class="container mx-auto" data-svelte-h="svelte-dg94ni"><div class="flex flex-col items-center justify-center"><h1 class="text-4xl font-bold">Home page</h1> <p class="text-xl">under construction</p></div></div> 
-			
+		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_z2wp85 = {
-						base: new URL(".", location).pathname.slice(0, -1),
+					__sveltekit_1iojb2 = {
+						base: "",
 						env: {}
 					};
 
 					const element = document.currentScript.parentElement;
 
-					const data = [null,null];
-
 					Promise.all([
-						import("./_app/immutable/entry/start.a5d49517.js"),
-						import("./_app/immutable/entry/app.64c2ea3d.js")
+						import("/_app/immutable/entry/start.72b9a3be.js"),
+						import("/_app/immutable/entry/app.ba8df1d8.js")
 					]).then(([kit, app]) => {
-						kit.start(app, element, {
-							node_ids: [0, 3],
-							data,
-							form: null,
-							error: null
-						});
+						kit.start(app, element);
 					});
 				}
 			</script>
