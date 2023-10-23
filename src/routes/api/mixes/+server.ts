@@ -1,5 +1,7 @@
 import type { RequestHandler } from './$types';
 
+export const prerender: boolean = true;
+
 export async function GET({ params }) {
     console.log(`${params}`);
     // return new Response(JSON.stringify(params), {});
