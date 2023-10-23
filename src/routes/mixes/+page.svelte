@@ -1,5 +1,14 @@
 <script lang="ts">
-	export let data = { collection: [] };
+	import type { Mix, Collection } from '$lib/types';
+
+	let mixes = [] as Mix[];
+
+	async function roll() {
+		const response = await fetch('/api/mixes');
+		const mixList: Collection = await response.json();
+		mixes = mixList.collection;
+		console.log(mixes);
+	}
 
 	function formatDuration(duration: number) {
 		const date = new Date(duration);
@@ -10,7 +19,9 @@
 	}
 </script>
 
-{#each data.collection as mix}
+<button class="btn btn-accent" on:click={roll}>Get Mixes</button>
+
+{#each mixes as mix}
 	<div class="collapse collapse-arrow bg-base-200">
 		<input type="radio" name="my-accordion-1" checked="checked" />
 
@@ -27,12 +38,6 @@
 					<div class="text-gray-500">{formatDuration(mix?.track?.duration)}</div>
 				</figcaption>
 			</figure>
-		</div>
-		<div class="collapse-content flex items-center">
-			<!-- <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url={mix?.track?.permalink_url}" width="100%" height="465" scrolling="no" frameborder="no"></iframe> -->
-			<!-- link to the soundcloud track -->
-
-			<p class="p1-4">{mix?.track?.description}</p>
 		</div>
 	</div>
 	<div class="divider" />
